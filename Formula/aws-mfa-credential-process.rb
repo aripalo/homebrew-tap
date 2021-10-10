@@ -5,29 +5,29 @@
 class AwsMfaCredentialProcess < Formula
   desc "A helper utility that plugs into standard credential_process to assume AWS IAM Role with – Yubikey Touch and Authenticator App – TOPT MFA to provide session credentials – with automatic refreshing."
   homepage ""
-  version "0.2.3"
+  version "0.3.0"
   license "Apache-2.0"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/aripalo/aws-mfa-credential-process/releases/download/v0.2.3/aws-mfa-credential-process_0.2.3_darwin_amd64.tar.gz"
-      sha256 "caa038190e7c7cdafc890fb6606f021aebe2661f285d21c366b842bf2f36e59b"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/aripalo/aws-mfa-credential-process/releases/download/v0.2.3/aws-mfa-credential-process_0.2.3_darwin_arm64.tar.gz"
-      sha256 "737ae4afa16bc5fdd1b3c1d05b3461980517490f8d6229ee9a586339aa9c7a11"
+      url "https://github.com/aripalo/aws-mfa-credential-process/releases/download/v0.3.0/aws-mfa-credential-process_0.3.0_darwin_arm64.tar.gz"
+      sha256 "612b03a7ea9230b0e46085f559c04a256e4540b3e458992a09f0601a8603c619"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/aripalo/aws-mfa-credential-process/releases/download/v0.3.0/aws-mfa-credential-process_0.3.0_darwin_amd64.tar.gz"
+      sha256 "36cf64272efcf79434f0808df4483e6dab6573382f0dd40580795c1c4add38ba"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/aripalo/aws-mfa-credential-process/releases/download/v0.2.3/aws-mfa-credential-process_0.2.3_linux_amd64.tar.gz"
-      sha256 "79dd3b6556bb855085cd6b09d6c00332c5f9b9ef3103179de95cb83c4152a00e"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aripalo/aws-mfa-credential-process/releases/download/v0.2.3/aws-mfa-credential-process_0.2.3_linux_arm64.tar.gz"
-      sha256 "7ade4ca424d57e4908cb7d9525eee495669ac92e7bc5b32424d1254c1c5aa20c"
+      url "https://github.com/aripalo/aws-mfa-credential-process/releases/download/v0.3.0/aws-mfa-credential-process_0.3.0_linux_arm64.tar.gz"
+      sha256 "061e09916bb2fe4401dc220403ade4272308de76731e9221367bd311efc91dcf"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/aripalo/aws-mfa-credential-process/releases/download/v0.3.0/aws-mfa-credential-process_0.3.0_linux_amd64.tar.gz"
+      sha256 "3f94d01b5ca04111693bc1979c3f97bbf4d2ca05b2f95becf84db408c87caaea"
     end
   end
 
