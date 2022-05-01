@@ -5,21 +5,21 @@
 class VegasCredentials < Formula
   desc "A helper utility that plugs into standard credential_process to assume AWS IAM Role with – Yubikey Touch and Authenticator App – TOTP MFA to provide session credentials – with automatic refreshing."
   homepage ""
-  version "0.10.7"
+  version "0.11.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/aripalo/vegas-credentials/releases/download/v0.10.7/vegas-credentials_0.10.7_darwin_arm64.tar.gz"
-      sha256 "c6c1bd08a5ea6aca4810e1ab017d09479a11b37f61faf664c59d64bb44b726ee"
+      url "https://github.com/aripalo/vegas-credentials/releases/download/v0.11.1/vegas-credentials_0.11.1_darwin_arm64.tar.gz"
+      sha256 "1cbe562ac0ead598493aa78529a12eeeca667369c8c1f0210c433fdd45ee2fef"
 
       def install
         bin.install "vegas-credentials"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/aripalo/vegas-credentials/releases/download/v0.10.7/vegas-credentials_0.10.7_darwin_amd64.tar.gz"
-      sha256 "534bb5d1741606450328079ea3742b7ed345345eca65f9bd713440bda142f936"
+      url "https://github.com/aripalo/vegas-credentials/releases/download/v0.11.1/vegas-credentials_0.11.1_darwin_amd64.tar.gz"
+      sha256 "0dd8de835ab21266eebfb14d3d245ed8ced8b4b4ebc7a05272005fd148adf437"
 
       def install
         bin.install "vegas-credentials"
@@ -28,17 +28,17 @@ class VegasCredentials < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/aripalo/vegas-credentials/releases/download/v0.10.7/vegas-credentials_0.10.7_linux_arm64.tar.gz"
-      sha256 "6eb736e4a9a24326ec8381469b6d2348acf37089ddd63f41f4047545b00123a3"
+    if Hardware::CPU.intel?
+      url "https://github.com/aripalo/vegas-credentials/releases/download/v0.11.1/vegas-credentials_0.11.1_linux_amd64.tar.gz"
+      sha256 "ab1a1168512b5889afe29111fee4ac7dee072478446b7c779143dbd5d30d1d4b"
 
       def install
         bin.install "vegas-credentials"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/aripalo/vegas-credentials/releases/download/v0.10.7/vegas-credentials_0.10.7_linux_amd64.tar.gz"
-      sha256 "329cc61af4d905cf519173830ffb0430e93a170c7c3d7a6b669cc523908fa7b3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/aripalo/vegas-credentials/releases/download/v0.11.1/vegas-credentials_0.11.1_linux_arm64.tar.gz"
+      sha256 "bebe72c059c44a0a8bf7dc8e1b2039e183166cadb5ef632d922e5f67a586f169"
 
       def install
         bin.install "vegas-credentials"
